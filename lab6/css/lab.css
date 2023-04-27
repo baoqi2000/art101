@@ -4,14 +4,6 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #d02424;
-    background-color: #d1b33a;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
   }
-
-section{
-  background-color: rgb(22, 218, 127);
-}
-
-body {
-  background-color: aqua;
-}

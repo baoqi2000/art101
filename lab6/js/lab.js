@@ -1,23 +1,21 @@
-/*
- * Author: Baoqi Yu and Haien Liang
- * Created: 26 April 2023
- * Email: <byu27@ucsc.edu> <hliang37@ucsc.edu>
- */ 
+// index.js - purpose and description here
+// Author: Your Name
+// Date:
 
-// Define Varibales
-carMake = "Subaru";
-carModel = "BRZ"; 
-carColor = "Black";
-carYear = "2016"
+// Constants
 
-// caculate
-carYear = 2023 - carYear;
+// Functions
 
-//output
-document.writeln("carMake: " + carMake + "<br>");
-document.writeln("carModel: " + carModel + "<br>");
-document.writeln("carColor: " + carColor + "<br>");
-document.writeln("carYear: " + carYear + "<br>");
-document.writeln("carAger: " + carAge + "years<br>");
+// this is an example function and this comment tells what it doees and what parameters are passed to it.
+function myFunction(param1, param2) {
+  // some code here
+  // return results;
+}
 
+function main() {
+  console.log("Main function started.");
+  // the code that makes everything happen
+}
 
+// let's get this party started
+main();
