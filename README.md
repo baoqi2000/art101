@@ -55,6 +55,13 @@ Here is the basic structure with stub or empty files in place.
 │   ├── img
 │   └── js
 │       └── lab.js
+├── lab7
+│   ├── css
+│   │   └── index.css
+│   ├── img
+│   ├── index.html
+│   └── js
+│       └── lab7.js
 └── experiments
    └── index.html
 ```
