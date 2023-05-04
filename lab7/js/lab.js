@@ -9,14 +9,22 @@
 function sortUserName() {
     var userName = window.prompt("What is the attendence code of last lecture? ");
     console.log("userName =", userName);
-    var nameArray = userName.split('');
+
+    var nameArray = userName.replace(/\s/g, '').split('');
     console.log("nameArray =", nameArray);
-    var nameArraySort = nameArray.sort();
+
+    var nameArraySort = nameArray.sort(function(a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
     console.log("nameArraySort =", nameArraySort);
+
     var nameSorted = nameArraySort.join('');
     console.log("nameSorted =", nameSorted);
+
     return nameSorted;
 }
 
-document.writeln("You got it! The code is: ",
-    sortUserName(), "</br>");
+
+
+document.writeln("<div class='name'>" + "You got it! The code is: " + sortUserName() + "</div>");
+
