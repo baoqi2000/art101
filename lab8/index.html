@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="css/lab.css">
+    <title>Art101 Lab 8</title>
+  </head>
+  <body>
+    <section>
+    <h1>Art101 Lab 8</h1>
+    
+    <div class="minor-section">
+    <h2>Challenge</h2>
+      <p>For lab 8, the challenge for our team is to use callback functions and how to display JS in the webpage without using document.writeln()</p>
+    </div>
+    
+    <div class="minor-section">
+    <h2>Problems</h2>
+      <p>We cannot link and add JS document into the HTML file successfully</p>
+    </div>
+
+    <div class="minor-section">
+    <h2>Results</h2>
+      <p>Here is our performance:</p>  
+      <p>Original Array:</p>
+      <p id="original"></p>
+      <p>Evenness of Array:</p>
+      <p id="evenness"></p>
+      <p>Array plus 1:</p>
+      <p id="plusOne"></p>
+    <script>
+        var array = [72, 1001, 191, 741, 8866];
+    
+        function isEven(z){
+          return z % 2 === 0;
+        }
+    
+        var evennessArray = array.map(isEven);
+        var plusOneArray = array.map(function(z) {
+          return z + 1;
+        });
+    
+    
+        var originalEl = document.getElementById("original");
+        originalEl.innerHTML = array;
+    
+        var evennessEl = document.getElementById("evenness");
+        evennessEl.innerHTML = evennessArray;
+
+        var plusOneEl = document.getElementById("plusOne");
+        plusOneEl.innerHTML = plusOneArray;
+      </script>
+    </div>
+    </section>
+  </body>
+</html>
+
+
+
+
