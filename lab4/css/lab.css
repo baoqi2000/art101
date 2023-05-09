@@ -10,3 +10,50 @@ section {
   border-left: solid 10px #e38f11;
   border-right: solid 10px #e38f11;
 }
+
+h1 {
+  font-family: papyrus, fantasy;
+  font-size: 88px;
+  font-style: italic;
+  font-style: bold;
+  color: rgb(17, 101, 66)      
+}
+
+h1 {
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-family: papyrus, fantasy;
+  font-size: 55px;
+  font-style: italic;
+  font-style: bold;
+  color: rgb(12, 87, 40)      
+}
+
+h2 {
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
+  color:rgb(85, 40, 112)
+}
+
+p {
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p2{
+  font-size: 27px;
+  color:rgb(210, 7, 241)
+}

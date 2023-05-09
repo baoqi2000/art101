@@ -51,6 +51,3 @@ var result = array.map(function(z){
 })
 //test 
 console.log("Let's we guess the reult:", results);
-
-var outputEl = document.getElementById("output"); 
-outputEl.innerHTML = mapResults; // put your results here
