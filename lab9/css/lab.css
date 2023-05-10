@@ -1,0 +1,58 @@
+section {
+    background-color: bisque;
+    padding: 100px;
+}
+
+h1 {
+    font-family: Copperplate, fantasy;
+    font-size: 100px;
+    font-style: bold;
+    color: rgb(84, 190, 26)
+}     
+    
+h1 {
+    top: -10px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+h2 {
+    font-family: Monaco, Monospace;
+    font-size: 55px;
+    font-style: italic;
+    font-style: bold;
+    color: rgb(12, 87, 40)      
+}
+  
+h2 {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+p {
+    font-size: 30px;
+    color:rgb(101, 11, 11)
+}
+  
+p {
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    font-family: Brush Script MT, Cursive;
+    font-size: 44px;
+    font-style: italic;
+    font-style: bold;
+    color: rgb(225, 23, 165)    
+}
+
+h3 {
+    margin: 1 auto;
+    text-align: center;
+}
+  
