@@ -5,12 +5,6 @@
  * Lab 9 JavaScript for the Web
  */ 
 
-/*
- * Author: Baoqi Yu & Haien Liang
- * Created: 9 May 2023
- * Email: <byu27@ucsc.edu> <hliang37@ucsc.edu>
- * Lab 9 JavaScript for the Web
- */ 
 
 
 // Find the output element and assign it to a variable

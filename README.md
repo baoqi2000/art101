@@ -62,6 +62,27 @@ Here is the basic structure with stub or empty files in place.
 │   ├── index.html
 │   └── js
 │       └── lab7.js
+├── lab8
+│   ├── css
+│   │   └── index.css
+│   ├── img
+│   ├── index.html
+│   └── js
+│       └── lab8.js
+├── lab9
+│   ├── css
+│   │   └── index.css
+│   ├── img
+│   ├── index.html
+│   └── js
+│       └── lab9.js
+├── lab10
+│   ├── css
+│   │   └── index.css
+│   ├── img
+│   ├── index.html
+│   └── js
+│       └── lab10.js
 └── experiments
    └── index.html
 ```
