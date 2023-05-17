@@ -23,35 +23,26 @@ function sortUserName() {
     return nameSorted;
 }
 
-// Get the buttons
 const glitchBtn = document.getElementById('glitch-btn');
 const resetBtn = document.getElementById('reset-btn');
 
-// Add event listeners to the buttons
 glitchBtn.addEventListener('click', glitch);
 resetBtn.addEventListener('click', reset);
 
-// Define the glitch function
+
 function glitch() {
-  // Get the content div
+ 
   const contentDiv = document.getElementById('content');
-  
-  // Apply a glitch effect by adding a random class
   const classes = ['glitch1', 'glitch2', 'glitch3'];
   const randomClass = classes[Math.floor(Math.random() * classes.length)];
   contentDiv.classList.add(randomClass);
 }
 
-// Define the reset function
 function reset() {
-  // Get the content div
+ 
   const contentDiv = document.getElementById('content');
-  
-  // Remove any glitch classes
   const classes = ['glitch1', 'glitch2', 'glitch3'];
   contentDiv.classList.remove(...classes);
 }
-
-
 
 document.writeln("<div class='name'>" + "You got it! The code is: " + sortUserName() + "</div>");

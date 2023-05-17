@@ -1,0 +1,32 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #70d9e0;
+}
+
+section {
+    background-color: #4CAF50;
+}
+
+h1 {
+	color: #e967c7;
+	margin-bottom: 10px;
+    font-size: 50px;
+    font-family: Apple Chancery, cursive;
+}
+
+p {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 44px;
+}
+
+#challenges #target {
+    color: purple;
+}
+
+#problems #target {
+    color: rgb(165, 24, 183);
+}
+
+#results #target {
+    color: rgb(136, 12, 202);
+}
