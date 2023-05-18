@@ -31,3 +31,32 @@ $("p").css("color","green")
 $("p").css("font-size","28px")
 $("button").css("color","DarkOliveGreen")
 
+//Task X
+
+let blueButton = $("#blueButton")  
+let redButton = $("#redButton")
+let greenButton = $("#greenButton") 
+let pinkButton = $("#pinkButton") 
+
+blueButton.on("click", function(){changeclass("#blueButton","green")})
+
+redButton.on("click", function(){changeclass("#redButton","blue")})
+
+greenButton.on("click", function(){changeclass("#greenButton","pink")})
+
+pinkButton.on("click", function(){changeclass("#pinkButton","red")})
+
+
+function changeclass(id, in_class){
+   let element = $(id)
+   
+   let colors = ["blue","green","red","pink"];
+
+   for (let color of colors){
+        element.removeClass(color);
+       }
+
+   element.addClass(in_class)
+
+
+}
