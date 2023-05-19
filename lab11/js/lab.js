@@ -57,6 +57,4 @@ function changeclass(id, in_class){
        }
 
    element.addClass(in_class)
-
-
 }
