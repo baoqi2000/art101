@@ -1,0 +1,35 @@
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+    font-family: Gill Sans;
+    color: rgb(101, 101, 221)
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-family: Gill Sans;
+    color: BurlyWood
+}
+
+p {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-family: Gill Sans;
+    color: BlanchedAlmond
+}
+
+body {
+    background-color:rgb(216, 123, 231);
+}
+
+section {
+    background-color:rgb(194, 70, 213);
+}
+
+mini-section {
+    background-color: PaleTurquoise;
+}
