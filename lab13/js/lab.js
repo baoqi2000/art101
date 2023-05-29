@@ -7,10 +7,10 @@
 
 
 function fizzBuzz() {
-    var output = ""; // String to store the output
+    var output = ""; 
   
     for (var i = 1; i <= 200; i++) {
-      var str = ""; // String to build the current output line
+      var str = ""; 
   
       if (i % 3 === 0) {
         str += "Fizz";
@@ -25,18 +25,18 @@ function fizzBuzz() {
       }
   
       if (str === "") {
-        str = i; // Use the number itself if not divisible by 3, 5, or 7
+        str = i;
       }
   
       output += str + "<br>";
     }
   
-    $("#output").html(output); // Display the output in the output div
+    $("#output").html(output); 
   }
   
   fizzBuzz(); 
 
-
+//Task X
     $("#configForm").submit(function(event) {
       event.preventDefault();
       fizzBuzz();
@@ -50,10 +50,10 @@ function fizzBuzz() {
         { factor: parseInt($("#factor3").val()), text: $("#text3").val() }
       ];
 
-      var output = ""; // String to store the output
+      var output = ""; 
 
       for (var i = 1; i <= maxNumber; i++) {
-        var str = ""; // String to build the current output line
+        var str = ""; 
 
         for (var j = 0; j < factors.length; j++) {
           if (i % factors[j].factor === 0) {
@@ -62,11 +62,11 @@ function fizzBuzz() {
         }
 
         if (str === "") {
-          str = i; // Use the number itself if not divisible by any factors
+          str = i;
         }
 
         output += "<div>" + str + "</div>";
       }
 
-      $("#output").html(output); // Display the output in the output div
+      $("#output").html(output); 
     }
