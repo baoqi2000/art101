@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 15</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/lab.css">
+    <script src="js/lab.js" defer></script>
+    <title>NASA APOD API</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Button click event handler for Chuck Norris Joke
+      $("#get-joke").click(function() {
+        // Make an AJAX request to the Chuck Norris Joke API
+        $.ajax({
+          url: "https://api.chucknorris.io/jokes/random",
+          type: "GET",
+          dataType: "json",
+          success: function(data) {
+            // Process and display the Chuck Norris Joke
+            $("#joke-output").html("<p>" + data.value + "</p>");
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Error:", textStatus, errorThrown);
+          }
+        });
+      });
+
+      // Button click event handler for NASA APOD
+      function getDate() {
+        return document.getElementById("dateSearch").value; 
+      }
+
+      async function call() {
+        let request = "";
+        fectch("./secrets.json").then(response => {
+            return reponse.json();
+        }).then(async function(myJSON) {
+            request = "https://api.nasa.gov/planetary/apod?date=" +getDate() + "&api_key=" + myJSON.api_key
+        })
+      }
+
+
+
+      $("#get-apod").click(function() {
+        // Make an AJAX request to the NASA APOD API
+        $.ajax({
+          url: "https://api.nasa.gov/planetary/apod",
+          type: "GET",
+          dataType: "json",
+          data: {
+            api_key: "seGdgn2f4f4NvSuWOhtx2NcMyJwlVuiaylWwsRcd" // Replace with your actual API key
+          },
+          success: function(data) {
+            // Process and display the APOD data
+            var title = data.title;
+            var explanation = data.explanation;
+            var imageUrl = data.url;
+            
+            // Display the APOD information
+            $("#apod-output").html("<h2>" + title + "</h2>");
+            $("#apod-output").append("<p>" + explanation + "</p>");
+            $("#apod-output").append("<img src='" + imageUrl + "' alt='APOD'>");
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Error:", textStatus, errorThrown);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+    <section>
+    <div id="challenge-section">
+        <h1>Lab 15: AJAX</h1>
+        <h1>Challenge</h1>
+        <p>This is the challenge section.</p>
+    </div>
+
+    <h1>Problems</h1>
+    <div id="problems-section">
+        <p>This is the problems section.</p>
+    </div>
+
+    <h1>Results</h1>
+    <div id="results-section">
+        <p>This is the results section.</p>
+    </div>
+
+   <h1>API Examples</h1>
+   <h2>Chuck Norris Joke</h2>
+   <button id="get-joke">Get Joke</button>
+   <div id="joke-output"></div>
+
+   <h2>NASA APOD</h2>
+   <button id="get-apod">Get APOD</button>
+   <div id="apod-output"></div>
+   </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

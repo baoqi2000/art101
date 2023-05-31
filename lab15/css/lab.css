@@ -1,0 +1,23 @@
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 55px;
+    font-family: "Gill Sans", sans-serif;
+    color:aquamarine
+    
+}
+body {
+    background-color: rgb(224, 173, 102);
+}
+
+section {
+    background-color: rgb(111, 81, 25) ;
+}
+
+p {
+    font-family: Gill Sans;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    color:rgb(239, 200, 239); 
+}
