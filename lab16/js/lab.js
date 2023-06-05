@@ -6,24 +6,42 @@
  */ 
 
 $(document).ready(function() {
-    $.ajax({
-        url: "https://xkcd.com/614/info.0.json",
-        data: { 
-            id: 123,
-            api_key: "blahblahblah",
-        },
-        type: "GET",
-        dataType: "json",
-        success: function(data) {
-            // Process the parts and add them to the webpage
-            $("#comic-title").text(data.title);
-            $("#comic-img").attr("src", data.img);
-            $("#comic-img").attr("alt", data.alt);
-            $("#comic-img").attr("title", data.alt);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("Error:", textStatus, errorThrown);
-        }
-    });
-});
+    var comicObj = {
+        num: 614, 
+        endpoint: "https://xkcd.com/",
+        apiData: null
+    };
 
+
+    function getAndPutData() {
+        var apiUrl = comicObj.endpoint + comicObj.num + "/info.0.json";
+
+        $.ajax({
+            url: apiUrl,
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                comicObj.apiData = data;
+                $("#comic-title").text(data.title);
+                $("#comic-img").attr("src", data.img);
+                $("#comic-img").attr("alt", data.alt);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log("Error:", textStatus, errorThrown);
+            }
+        });
+    }
+
+    $("#prev-btn").click(function() {
+        comicObj.num -= 1;
+        getAndPutData();
+    });
+
+    $("#next-btn").click(function() {
+        comicObj.num += 1;
+        getAndPutData();
+    });
+
+
+    getAndPutData();
+});

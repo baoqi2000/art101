@@ -21,3 +21,10 @@ p {
     font-size: 40px;
     color:rgb(239, 200, 239); 
 }
+
+button {
+    position: relative;
+    text-align: center;
+    font-size: 44px;
+    color: orange;
+}
