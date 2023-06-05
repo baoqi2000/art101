@@ -1,38 +1,29 @@
 /*
  * Author: Baoqi Yu & Haien Liang
- * Created: 1 June 2023
+ * Created: 5 June 2023
  * Email: <byu27@ucsc.edu> <hliang37@ucsc.edu>
  * Lab 16: JSON and APIs
  */ 
 
-
-// Make the AJAX request
-
-
-// Using the core $.ajax() method
-$.ajax({
-    // The URL for the request (from the api docs)
-    url: "https://xkcd.com/66/info.0.json",
-    // The data to send (will be converted to a query string)
-    data: { 
-            // here is where any data required by the api 
-            //   goes (check the api docs)
+$(document).ready(function() {
+    $.ajax({
+        url: "https://xkcd.com/614/info.0.json",
+        data: { 
             id: 123,
             api_key: "blahblahblah",
-          },
-    // Whether this is a POST or GET request
-    type: "GET",
-    // The type of data we expect back
-    dataType : "json",
-    // What do we do when the api call is successful
-    //   all the action goes in here
-    success: function(data) {
-        // do stuff
-        console.log(data);
-    },
-    // What we do if the api call fails
-    error: function (jqXHR, textStatus, errorThrown) { 
-        // do stuff
-        console.log("Error:", textStatus, errorThrown);
-    }
-})
+        },
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            // Process the parts and add them to the webpage
+            $("#comic-title").text(data.title);
+            $("#comic-img").attr("src", data.img);
+            $("#comic-img").attr("alt", data.alt);
+            $("#comic-img").attr("title", data.alt);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Error:", textStatus, errorThrown);
+        }
+    });
+});
+
