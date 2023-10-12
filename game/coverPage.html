@@ -22,6 +22,11 @@
         .container {
             padding: 100px;
             margin-bottom: 160px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
@@ -48,20 +53,11 @@
     <div class="container">
         <h1>DREAM COMES TRUE</h1>
         <div class="author">Author: Baoqi Yu</div>
-        <a class="begin-button" href="introduction.html">Let's begin</a>
+        <a class="begin-button" href="all/introduction.html">Let's begin</a>
     </div>
 
     <audio src="haha.mp3" autoplay loop></audio>
-
-    <div class="container">
-        <!-- Your existing content -->
-    </div>
-
-    <div class="option-buttons">
-        <!-- Your option buttons -->
-    </div>
-
-    <script>
+     <script>
         function goToPageA() {
             window.location.href = 'pageA.html';
         }
@@ -69,6 +65,6 @@
         function goToPageB() {
             window.location.href = 'pageB.html';
         }
-    </script>
+    </script> 
 </body>
 </html>
