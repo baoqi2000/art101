@@ -8,7 +8,7 @@
 carMake = "Subaru";
 carModel = "BRZ"; 
 carColor = "Black";
-carYear = "20126"
+carYear = "2012"
 
 // caculate
 carYear = 2023 - carYear;
