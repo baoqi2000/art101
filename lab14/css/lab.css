@@ -36,3 +36,7 @@ body {
     font-family: Gill Sans;
   }
   
+  body {
+    background-image: url("https://earthobservatory.nasa.gov/");
+  }
+  
