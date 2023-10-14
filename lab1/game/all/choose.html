@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Story</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('back.gif'); /* Set the GIF as the background */
+            background-size: cover; /* Make sure the background covers the entire viewport */
+            background-repeat: no-repeat; /* Prevent the background from repeating */
+            background-attachment: fixed; /* Keep the background fixed while scrolling */
+            color: #83317b;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .continue-button {
+            position: center;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 2em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #c882e1;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Night is coming</h1>
+        <p>
+            After a few seconds, you wake up and open the eyes
+           However, you notice you are not in your room, instead, you are......
+        </p>
+    </div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animal Selection</title>
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                transition: background 1s ease;
+            }
+    
+            .container {
+                text-align: center;
+            }
+    
+            button {
+                font-size: 1.5em;
+                padding: 10px 20px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            #goldfish-btn {
+                background-color: #e4c569;
+            }
+    
+            #kitten-btn {
+                background-color: #c7b3d0;
+            }
+    
+            #dove-btn {
+                background-color: #c0d3e8;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <button id="goldfish-btn" onclick="goToPage('fish.html')">Goldfish</button>
+            <button id="kitten-btn" onclick="goToPage('kitten.html')">Kitten</button>
+            <button id="dove-btn" onclick="goToPage('dove.html')">Dove</button>
+        </div>
+    
+        <script>
+            function goToPage(page) {
+                window.location.href = page;
+            }
+    
+            var colors = [
+                'linear-gradient(to bottom, #ffcc99, #ff6666)',
+                'linear-gradient(to bottom, #a1c4fd, #c2e9fb)',
+                'linear-gradient(to bottom, #8e2de2, #4a00e0)',
+                'linear-gradient(to bottom, #4776e6, #8e54e9)',
+                'linear-gradient(to bottom, #ff6e7f, #bfe9ff)',
+                'linear-gradient(to bottom, #f12711, #f5af19)'
+            ];
+    
+            var index = 0;
+            setInterval(function() {
+                document.body.style.background = colors[index];
+                index = (index + 1) % colors.length;
+            }, 5000); // Change every 5 seconds
+        </script>
+    </body>
+</body>
+
+</html>

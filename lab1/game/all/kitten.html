@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Careful of Choosing Your New Life</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #f0d6e0, #f5e8e8);
+            animation: colorChange 10s infinite alternate;
+            text-align: center;
+            color: #333333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .animal-ability {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .ability-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #333333;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .continue-button {
+            background-color: #31e1de; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 100px;
+        }
+
+        .continue-button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background: linear-gradient(to bottom, #f0d6e0, #f5e8e8);
+            }
+            100% {
+                background: linear-gradient(to bottom, #e6f5f5, #d1ebef);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click the Button to show ur skill!</h1>
+
+    <div class="container">
+        <div class="animal-ability" id="goldfish-ability">
+            Climbing Ability: You can climb any walls, trees and mountains!
+        </div>
+        <div class="animal-ability" id="kitten-ability">
+            The kitten is agile, cute, and can communicate with other cats in their secret language!
+        </div>
+        <div class="animal-ability" id="dove-ability">
+            The dove symbolizes peace and love. It is known for its gentle nature and soothing cooing sound.
+        </div>
+
+        <button class="ability-button" onclick="showAbility('goldfish-ability')">Reveal Ability</button>
+    </div>
+
+    <img src="kitten.jpg">
+  
+    <script>
+        function showAbility(id) {
+            var abilities = document.getElementsByClassName('animal-ability');
+            for (var i = 0; i < abilities.length; i++) {
+                abilities[i].style.display = 'none';
+            }
+            var ability = document.getElementById(id);
+            ability.style.display = 'block';
+        }
+    </script>
+     <button class="continue-button" onclick="continueToNextPage()">Continue</button>
+
+     <script>
+         function continueToNextPage() {
+             window.location.href = "4.html"; // Replace with the actual file name of the next page
+         }
+     </script>
+</body>
+
+</html>
