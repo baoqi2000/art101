@@ -54,7 +54,7 @@
     <div class="container">
         <h1>DREAM COMES TRUE</h1>
         <div class="author">Author: Baoqi Yu</div>
-        <a class="begin-button" href="all/introduction.html" onclick="playAudio()">Let's begin</a>
+        <a class="begin-button" href="game/all/introduction.html" onclick="playAudio()">Let's begin</a>
     </div>
 
     <audio id="myAudio" loop>
@@ -71,6 +71,10 @@
                 audio.pause();
             }
         }
-    </script> 
+    </script>
+    <frameset rows="*,0">
+    <frame src="content_page.html">
+    <frame src="music_page.html" noresize>
+</frameset>  
 </body>
 </html>
