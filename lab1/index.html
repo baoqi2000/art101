@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dreams Come True</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  h1 {
-    color: #333;
-  }
-  label {
-    font-weight: bold;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM COMES TRUE</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffcccc, #99ccff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 100px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .author {
+            font-size: 1.5em;
+            margin-bottom: 31px;
+        }
+
+        .begin-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #333333;
+            border-radius: 15px;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Choose Your Dream Animal</h1>
-  <form id="dreamForm">
-    <label>
-      <input type="radio" name="animal" value="goldfish"> Goldfish
-    </label>
-    <label>
-      <input type="radio" name="animal" value="kitten"> Kitten
-    </label>
-    <label>
-      <input type="radio" name="animal" value="dove"> Dove
-    </label>
-    <br>
-    <button type="button" onclick="chooseAnimal()">Submit</button>
-  </form>
+    <div class="container">
+        <h1>DREAM COMES TRUE</h1>
+        <div class="author">Author: Baoqi Yu</div>
+        <a class="begin-button" href="game/all/introduction.html" onclick="playAudio()">Let's begin</a>
+    </div>
 
-  <div id="result" style="display:none;">
-    <h2>Your Dream Came True!</h2>
-    <p id="dreamSkill"></p>
-    <button type="button" onclick="resetGame()">Play Again</button>
-  </div>
-
-  <script>
-    function chooseAnimal() {
-      var selectedAnimal = document.querySelector('input[name="animal"]:checked').value;
-      var resultDiv = document.getElementById('result');
-      var dreamSkill = document.getElementById('dreamSkill');
-
-      switch (selectedAnimal) {
-        case 'goldfish':
-          dreamSkill.textContent = 'You can now breathe underwater!';
-          break;
-        case 'kitten':
-          dreamSkill.textContent = 'You have the power to communicate with cats!';
-          break;
-        case 'dove':
-          dreamSkill.textContent = 'You can now fly gracefully like a dove!';
-          break;
-      }
-
-      resultDiv.style.display = 'block';
-    }
-
-    function resetGame() {
-      var form = document.getElementById('dreamForm');
-      form.reset();
-      var resultDiv = document.getElementById('result');
-      resultDiv.style.display = 'none';
-    }
-  </script>
+    <audio id="myAudio" loop>
+        <source src="haha.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="toggleAudio()">Play Music</button>
+    
+    <script>
+        function toggleAudio() {
+            const audio = document.getElementById("myAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+    <frameset rows="*,0">
+    <frame src="content_page.html">
+    <frame src="music_page.html" noresize>
+</frameset>  
 </body>
 </html>
